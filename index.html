@@ -3,52 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClashMaster Elite | Intelligence System</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>ClashMaster - Painel de IA</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <button id="menuToggle" class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-    </button>
 
-    <div class="sc-layout">
-        <div id="sidebarOverlay" class="sc-overlay"></div>
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-coins" style="color: #FFCC00;"></i>
+            <h2>CLASHMASTER</h2>
+        </div>
 
-        <aside class="sc-sidebar" id="sidebar">
-            <div class="sc-logo"><i class="fas fa-database"></i> <span>CLASH<b>MASTER</b></span></div>
-            <nav class="sc-nav">
-                <div class="nav-section">INTELIGÊNCIA</div>
-                <button class="sc-btn active" data-tab="dashboard"><i class="fas fa-chart-pie"></i> Painel de IA</button>
-                <button class="sc-btn" data-tab="strategy"><i class="fas fa-crosshairs"></i> Sugerimento de Ataque</button>
+        <div class="menu-section">
+            <p>INTELIGÊNCIA</p>
+            <button class="menu-item active"><i class="fas fa-chart-pie"></i> Painel de IA</button>
+            <button class="menu-item"><i class="fas fa-crosshairs"></i> Sugerimento de Ataque</button>
+        </div>
 
-                <div class="nav-section">VILA PRINCIPAL</div>
-                <button class="sc-btn" data-tab="defesa"><i class="fas fa-shield-alt"></i> Defesas & Armadilhas</button>
-                <button class="sc-btn" data-tab="recursos"><i class="fas fa-coins"></i> Recursos</button>
-                <button class="sc-btn" data-tab="herois"><i class="fas fa-crown"></i> Heróis</button>
+        <div class="menu-section">
+            <p>VILA PRINCIPAL</p>
+            <button class="menu-item"><i class="fas fa-shield-alt"></i> Defesas & Armadilhas</button>
+            <button class="menu-item"><i class="fas fa-coins"></i> Recursos</button>
+            <button class="menu-item"><i class="fas fa-crown"></i> Heróis</button>
+        </div>
 
-                <div class="nav-section">EXÉRCITO</div>
-                <button class="sc-btn" data-tab="elixir"><i class="fas fa-droplet"></i> Elixir Rosa</button>
-                <button class="sc-btn" data-tab="negro"><i class="fas fa-tint"></i> Elixir Negro</button>
-                <button class="sc-btn" data-tab="super"><i class="fas fa-bolt"></i> Super Tropas</button>
-                <button class="sc-btn" data-tab="cerco"><i class="fas fa-truck-monster"></i> Máquinas de Cerco</button>
-            </nav>
-            <div class="cv-control">
-                <label>CENTRO DE VILA ATUAL</label>
-                <div class="cv-picker">
-                    <button id="btnMinus" class="cv-btn"><i class="fas fa-minus"></i></button>
-                    <span id="cvDisplay">12</span>
-                    <button id="btnPlus" class="cv-btn"><i class="fas fa-plus"></i></button>
-                </div>
+        <div class="menu-section">
+            <p>EXÉRCITO</p>
+            <button class="menu-item"><i class="fas fa-tint"></i> Elixir Rosa</button>
+            <button class="menu-item"><i class="fas fa-tint" style="color: #7d5bbe;"></i> Elixir Negro</button>
+            <button class="menu-item"><i class="fas fa-bolt"></i> Super Tropas</button>
+            <button class="menu-item"><i class="fas fa-truck-monster"></i> Máquinas de Cerco</button>
+        </div>
+
+        <div class="cv-selector">
+            <p>CENTRO DE VILA ATUAL</p>
+            <div class="controls">
+                <button onclick="changeCV(-1)">-</button>
+                <span id="cv-display">12</span>
+                <button onclick="changeCV(1)">+</button>
             </div>
-        </aside>
-
-        <main class="sc-main">
-            <header class="sc-header">
-                <h1 id="tabTitle">Painel de IA</h1>
-                <div id="rankingBadge" class="badge">ANALISANDO...</div>
-            </header>
-            <div id="grid" class="sc-grid"></div>
-        </main>
+        </div>
     </div>
+
+    <main class="content">
+        <header>
+            <h1 id="page-title">Painel de IA</h1>
+        </header>
+        <section id="main-display">
+            <p>ANALISANDO...</p>
+            <div id="data-container"></div>
+        </section>
+    </main>
+
+    <script src="./js/app.js"></script>
 </body>
 </html>

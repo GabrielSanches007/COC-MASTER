@@ -1,0 +1,104 @@
+:root {
+    --bg-dark: #153e85;
+    --sidebar-color: #1a4a9d;
+    --accent-yellow: #ffcc00;
+    --text-white: #ffffff;
+    --text-gray: #a0aec0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: var(--bg-dark);
+    height: 100vh;
+    color: var(--text-white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.logo h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: var(--accent-yellow);
+}
+
+.menu-section {
+    margin-bottom: 25px;
+}
+
+.menu-section p {
+    font-size: 12px;
+    color: var(--text-gray);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.menu-item.active {
+    background-color: var(--accent-yellow);
+    color: #000;
+    font-weight: bold;
+}
+
+.menu-item:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cv-selector {
+    margin-top: auto;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.controls button {
+    background-color: var(--accent-yellow);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #fff;
+}

@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClashMaster Elite | Intelligence System</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <button id="menuToggle" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
     <div class="sc-layout">
-        <aside class="sc-sidebar">
+        <div id="sidebarOverlay" class="sc-overlay"></div>
+
+        <aside class="sc-sidebar" id="sidebar">
             <div class="sc-logo"><i class="fas fa-database"></i> <span>CLASH<b>MASTER</b></span></div>
             <nav class="sc-nav">
                 <div class="nav-section">INTELIGÊNCIA</div>
@@ -45,6 +50,5 @@
             <div id="grid" class="sc-grid"></div>
         </main>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>
